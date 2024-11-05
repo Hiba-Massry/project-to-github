@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+app.get('/api/users', (req, res) => {
+    res.json({"users": [{"name": "user1"}]})
+})
+
 app.use('/', (req, res) => {
     res.send("<h1>Hello World!</h1>")
 })
